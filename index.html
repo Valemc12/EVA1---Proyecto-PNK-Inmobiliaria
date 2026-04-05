@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Coquimbo - Portal de Gestión</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">INMOBILIARIA COQUIMBO</div>
+        <nav>
+            <a href="#inicio">INICIO</a>
+            <a href="#proyecto">PROYECTO</a>
+            <a href="#busqueda">BUSCAR</a>
+            <a href="#reg-propietario">SOY PROPIETARIO</a>
+            <a href="#reg-gestor">SOY GESTOR</a>
+            <a href="#registro-propiedades">PUBLICAR</a>
+            <a href="#administracion" class="btn-admin-nav">ADMINISTRACIÓN</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="inicio" class="hero-section">
+            <div class="hero-banner">
+                <h1>HACIENDA ELQUI</h1>
+                <p>Tu futuro hogar en la IV Región</p>
+            </div>
+            
+            <div class="login-box">
+                <h3>Acceso</h3>
+                <form onsubmit="event.preventDefault();">
+                    <label>Rut</label>
+                    <input type="text" placeholder="12.345.678-9" required>
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="********" required>
+                    <button type="submit" class="btn-blue">INGRESAR</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="proyecto">
+            <h2>AMBITO Y ALCANCE DEL PROYECTO</h2>
+            <p>El proyecto se desarrolla para la Región de Coquimbo por lo que debe considerar:</p>
+            <ul class="scope-list">
+                <li>Provincias (Elqui, Limarí, Choapa)</li>
+                <li>Comunas (La Serena, Coquimbo, Ovalle)</li>
+                <li>Sectores (El Milagro, Peñuelas, etc.)</li>
+            </ul>
+        </section>
+
+        <h2 id="busqueda" class="section-title">BÚSQUEDA DE INMUEBLES</h2>
+        <form class="search-panel">
+            <div>
+                <label>Provincia</label>
+                <select required>
+                    <option value="">Seleccione Provincia</option>
+                    <option>Elqui</option>
+                    <option>Limarí</option>
+                    <option>Choapa</option>
+                </select>
+            </div>
+            <div>
+                <label>Comuna</label>
+                <select required>
+                    <option value="">Seleccione Comuna</option>
+                    <option>La Serena</option>
+                    <option>Coquimbo</option>
+                    <option>Vicuña</option>
+                    <option>Ovalle</option>
+                    <option>Monte Patria</option>
+                    <option>Illapel</option>
+                    <option>Los Vilos</option>
+                </select>
+            </div>
+            <div>
+                <label>Sector</label>
+                <input type="text" placeholder="Ej: El Milagro" required>
+            </div>
+            <div>
+                <button type="submit" class="btn-yellow">FILTRAR PROPIEDADES</button>
+            </div>
+        </form>
+
+        <div class="grid-3" id="lista-propiedades">
+            <article class="prop-card">
+                <img src="img/terreno.jpg" class="prop-img" alt="Terreno">
+                <p class="prop-code">Cód: T-88221 | TERRENO</p>
+                <h4>Terreno Pan de Azúcar</h4>
+                <p class="prop-price">$22.000.000</p>
+                <button class="btn-yellow" onclick="window.location.href='pagina2.html'">Ver Detalle</button>
+            </article>
+
+            <article class="prop-card">
+                <img src="img/depto.jpg" class="prop-img" alt="Departamento">
+                <p class="prop-code">Cód: D-44332 | DEPARTAMENTO</p>
+                <h4>Depto Peñuelas Oriente</h4>
+                <p class="prop-price">$120.000.000</p>
+                <button class="btn-yellow" onclick="window.location.href='pagina3.html'">Ver Detalle</button>
+            </article>
+
+            <article class="prop-card">
+                <img src="img/casa.jpg" class="prop-img" alt="Casa">
+                <p class="prop-code">Cód: C-01254 | CASA</p>
+                <h4>Casa El Milagro, La Serena</h4>
+                <p class="prop-price">$154.000.000</p>
+                <button class="btn-yellow" onclick="window.location.href='pagina4.html'">Ver Detalle</button>
+            </article>
+        </div>
+
+        <section id="reg-propietario">
+            <h2>Registrarme como PROPIETARIO</h2>
+            <form class="grid-2">
+                <div><label>Rut</label><input type="text" placeholder="Ej: 11.222.333-4" required></div>
+                <div><label>Nombre Completo</label><input type="text" required></div>
+                <div><label>Fecha de Nacimiento</label><input type="date" required></div>
+                <div><label>Sexo</label><select required><option value="">Seleccione</option><option>Femenino</option><option>Masculino</option></select></div>
+                <div><label>Correo Electrónico</label><input type="email" required></div>
+                <div><label>Contraseña</label><input type="password" required></div>
+                <div><label>Teléfono Móvil</label><input type="tel" required></div>
+                <div><label>N° Registro Bienes Raíces</label><input type="text" required></div>
+                <button type="submit" class="btn-blue span-2">SOLICITAR ALTA PROPIETARIO</button>
+            </form>
+        </section>
+
+        <section id="reg-gestor" class="border-yellow">
+            <h2>Registrarme como GESTOR INMOBILIARIO FREE</h2>
+            <form class="grid-2">
+                <div><label>Rut</label><input type="text" placeholder="Ej: 11.222.333-4" required></div>
+                <div><label>Nombre Completo</label><input type="text" required></div>
+                <div><label>Fecha Nacimiento</label><input type="date" required></div>
+                <div><label>Sexo</label><select required><option value="">Seleccione</option><option>Femenino</option><option>Masculino</option></select></div>
+                <div><label>Correo Electrónico</label><input type="email" required></div>
+                <div><label>Contraseña</label><input type="password" required></div>
+                <div><label>Teléfono Móvil</label><input type="tel" required></div>
+                <div class="span-2"><label>Certificado de Antecedentes</label><input type="file" required></div>
+                <button type="submit" class="btn-yellow span-2">ENVIAR POSTULACIÓN GESTOR</button>
+            </form>
+        </section>
+
+        <section id="registro-propiedades">
+            <h2>Publicar Nueva Propiedad</h2>
+            <form id="form-publicar" class="grid-2">
+                <div>
+                    <label>Tipo de Propiedad</label>
+                    <select id="tipo-p" required>
+                        <option value="">Seleccione</option>
+                        <option value="CASA">Casa</option>
+                        <option value="DEPARTAMENTO">Departamento</option>
+                        <option value="TERRENO">Terreno</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Título / Nombre del Inmueble</label>
+                    <input type="text" id="titulo-p" placeholder="Ej: Casa Nueva La Serena" required>
+                </div>
+                <div class="span-2"><label>Descripción</label><textarea id="desc-p" rows="3" required></textarea></div>
+                
+                <div><label>Cantidad de Baños</label><input type="number" min="0" required></div>
+                <div><label>Cantidad de Dormitorios</label><input type="number" min="0" required></div>
+                <div><label>Área Total Terreno (m²)</label><input type="number" step="0.01" required></div>
+                <div><label>Área Construida (m²)</label><input type="number" step="0.01" required></div>
+                <div><label>Precio en $</label><input type="number" id="precio-p" required></div>
+                <div><label>Precio en UF</label><input type="number" step="0.01" required></div>
+                <div class="span-2"><label>Fecha de Publicación</label><input type="date" required value="2026-04-04"></div>
+
+                <div class="equipamiento-box span-2">
+                    <label>Equipamiento:</label>
+                    <div class="equip-grid">
+                        <span><input type="checkbox"> Bodega</span>
+                        <span><input type="checkbox"> Estacionamiento</span>
+                        <span><input type="checkbox"> Logia</span>
+                        <span><input type="checkbox"> Cocina amoblada</span>
+                        <span><input type="checkbox"> Antejardín</span>
+                        <span><input type="checkbox"> Patio trasero</span>
+                        <span><input type="checkbox"> Piscina</span>
+                    </div>
+                </div>
+
+                <div class="span-2">
+                    <label>Ubicación (Google Maps API)</label>
+                    <div class="map-placeholder">
+                        [ Mapa Interactivo - Coordenadas Geográficas ]
+                    </div>
+                </div>
+
+                <div class="span-2 visit-option">
+                    <input type="checkbox" id="visita">
+                    <label for="visita">Permitir opción de "Solicitar una Visita"</label>
+                </div>
+
+                <button type="submit" class="btn-blue span-2">PUBLICAR INMUEBLE</button>
+            </form>
+        </section>
+
+        <section id="administracion" class="admin-panel">
+            <h2 class="admin-title">DASHBOARD - PANEL DE CONTROL</h2>
+            <div class="admin-card">
+                <b>Juan Carlos Pérez</b><br>
+                <small>Perfil: Propietario</small>
+                <div class="admin-actions">
+                    <button class="btn-approve">Habilitar</button>
+                    <button class="btn-reject">Rechazar</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inmobiliaria Coquimbo | Valentina Moreno</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('form-publicar');
+        const lista = document.getElementById('lista-propiedades');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const tipo = document.getElementById('tipo-p').value;
+            const titulo = document.getElementById('titulo-p').value;
+            const precio = document.getElementById('precio-p').value;
+            const codigo = "N-" + Math.floor(Math.random() * 10000);
+
+            const nuevoArticulo = document.createElement('article');
+            nuevoArticulo.className = 'prop-card';
+            
+            let imgRuta = 'img/casa.jpg';
+            if(tipo === 'TERRENO') imgRuta = 'img/terreno.jpg';
+            if(tipo === 'DEPARTAMENTO') imgRuta = 'img/depto.jpg';
+
+            nuevoArticulo.innerHTML = `
+                <img src="${imgRuta}" class="prop-img">
+                <p class="prop-code">Cód: ${codigo} | ${tipo}</p>
+                <h4>${titulo}</h4>
+                <p class="prop-price">$${Number(precio).toLocaleString('es-CL')}</p>
+                <button class="btn-yellow" onclick="alert('Propiedad recién publicada')">Ver Detalle</button>
+            `;
+
+            lista.prepend(nuevoArticulo);
+            form.reset();
+            alert('¡Propiedad publicada con éxito!');
+            window.location.href = "#busqueda";
+        });
+    </script>
+</body>
+</html>
+
